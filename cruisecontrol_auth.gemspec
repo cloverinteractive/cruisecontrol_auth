@@ -8,9 +8,12 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Enrique Vidal"]
   s.email       = ["enrique@cloverinteractive.com"]
-  s.homepage    = "http://github.com/cloverinteractive/cruise_control_auth"
+  s.homepage    = "http://github.com/cloverinteractive/cruisecontrol_auth"
   s.summary     = %q{Add simple authentication to cruisecontrol.rb}
   s.has_rdoc    = false
+  s.files       = Dir["{app,lib,config}/**/*"] + ["MIT-LICENSE", "Rakefile", "Gemfile"]
+
+  s.rubyforge_project = "cruise_control_auth"
 
   [ [ "rails",  "3.0.7"     ],
     [ "acl9",   "0.12.0"    ],
@@ -25,11 +28,4 @@ Gem::Specification.new do |s|
   ].each do |gem, version|
     s.add_development_dependency gem, version
   end
-
-  s.rubyforge_project = "cruise_control_auth"
-
-  s.files         = `git ls-files`.split("\n")
-  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
-  s.require_paths = ["lib"]
 end
