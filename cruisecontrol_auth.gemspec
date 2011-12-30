@@ -12,9 +12,9 @@ Gem::Specification.new do |s|
   s.summary     = %q{Add simple authentication to cruisecontrol.rb}
   s.has_rdoc    = false
 
-  [ [ "rails",  "~> 3.0.0"  ],
+  [ [ "rails",  "3.0.7"     ],
     [ "acl9",   "0.12.0"    ],
-    [ "devise", "2.0.0"     ]
+    [ "devise", "1.5.3"     ]
   ].each do |gem, version|
     s.add_dependency gem, version
   end

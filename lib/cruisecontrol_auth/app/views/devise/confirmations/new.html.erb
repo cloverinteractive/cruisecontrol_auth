@@ -1,0 +1,16 @@
+<div id="login_form">
+  <%= from_for resource, :as => resource_name, :url => confirmation_path(resource_name), :html => { :method => :post } do |f| %>
+    <fieldset>
+      <%= devise_error_messages! %>
+
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+
+      <%= f.submit 'Resend confirmation instructions' %>
+    </fieldset>
+  <% end %>
+</div>
+
+<div class="more_options">
+  <%= render :partial => "devise/shared/links" %>
+</div>
